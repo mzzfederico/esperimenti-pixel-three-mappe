@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "babel-eslint": "^10.1.0",
+    "pngjs": "^6.0.0",
+    "three": "^0.127.0"
+  },
+  "scripts": {
+    "png2pos": "node ./utils/commands.js png2pos"
+  }
+}
