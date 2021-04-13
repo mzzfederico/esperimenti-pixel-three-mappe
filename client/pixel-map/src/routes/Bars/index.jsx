@@ -1,5 +1,5 @@
 import React, { Suspense, useMemo, useRef } from 'react';
-import regioni from "./regioni.svg";
+import nord from "./nord.svg";
 
 import { useLoader } from '@react-three/fiber'
 import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader'
@@ -9,7 +9,7 @@ export default function Bars() {
     const group = useRef();
     return (
         <Suspense fallback={<></>}>
-            <SVGFile groupRef={group} file={regioni} />
+            <SVGFile groupRef={group} file={nord} />
         </Suspense>
     );
 }
@@ -25,7 +25,7 @@ function SVGFile({ groupRef, file }) {
     );
 
     return (
-        <group ref={groupRef}>(
+        <group ref={groupRef} position={[0, 0, 0]} scale={[0.01, 0.01, 0.01]} rotation={[6, 0.2, 0.1]} >(
             <>
                 {shapes.map((props, key) => (
                     <SVGShape key={key} {...props} />
