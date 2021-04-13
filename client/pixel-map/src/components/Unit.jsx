@@ -1,10 +1,7 @@
-import React, { useRef, useState } from 'react';
-import { useFrame } from 'react-three-fiber';
+import React, { useRef } from 'react';
 
 export function Unit({ color = "red", ...props }) {
     const mesh = useRef()
-
-    const { planePosition } = props;
 
     const box_size_den = 12;
 
